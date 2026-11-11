@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "secure-notes": {
+      "command": "secure-mcp-server",
+      "args": ["serve", "--transport", "stdio"],
+      "env": {
+        "MCP_JWT_SECRET": "<same secret used to issue the token>",
+        "MCP_AGENT_TOKEN": "<output of: secure-mcp-server token --sub desktop-agent --scope notes:read>",
+        "MCP_SANDBOX_DIR": "/absolute/path/to/secure-mcp-server/sandbox",
+        "MCP_POLICY_PATH": "/absolute/path/to/secure-mcp-server/policy.yaml",
+        "MCP_AUDIT_LOG": "/absolute/path/to/secure-mcp-server/audit.log.jsonl"
+      }
+    }
+  }
+}

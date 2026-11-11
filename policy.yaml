@@ -1,0 +1,14 @@
+# Least-privilege policy: each tool names the one scope a caller's token must carry.
+# Tools not listed here are denied, even if the server exposes them.
+tools:
+  whoami:
+    scope: notes:read
+  search_notes:
+    scope: notes:read
+  read_note:
+    scope: notes:read
+  create_ticket:
+    scope: tickets:write
+  delete_ticket:
+    scope: tickets:admin
+    destructive: true
